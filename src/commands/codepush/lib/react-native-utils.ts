@@ -483,7 +483,7 @@ export function getAndroidHermesEnabled(gradleFile: string): boolean {
       throw new Error(`Unable to parse the "${buildGradlePath}" file. Please ensure it is a well-formed Gradle file.`);
     })
     .then((buildGradle: any) => {
-      return buildGradle['enableHermes:'];
+      return buildGradle["enableHermes:"];
     });
 }
 
