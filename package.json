@@ -1,6 +1,6 @@
 {
-  "name": "appcenter-cli",
-  "version": "2.10.10",
+  "name": "appcenter-cli-v2",
+  "version": "1.0.0",
   "description": "Command line tool for Visual Studio App Center",
   "keywords": [
     "microsoft",
@@ -13,7 +13,7 @@
   },
   "main": "dist/index.js",
   "bin": {
-    "appcenter": "./bin/appcenter.js"
+    "appcenter": "bin/appcenter.js"
   },
   "preferGlobal": true,
   "scripts": {
@@ -153,5 +153,8 @@
     "xcode": "3.0.1",
     "xml2js": "0.4.23",
     "yazl": "2.5.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }
