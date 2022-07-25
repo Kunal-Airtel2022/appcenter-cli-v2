@@ -521,8 +521,7 @@ function getHermesOSBin(): string {
 }
 
 function getHermesOSExe(): string {
-  const react63orAbove = compare(coerce(getReactNativeVersion()).version, "0.63.0") !== -1;
-  const hermesExecutableName = react63orAbove ? "hermesc" : "hermes";
+  const hermesExecutableName = "hermesc";
   switch (process.platform) {
     case "win32":
       return hermesExecutableName + ".exe";
@@ -547,6 +546,7 @@ function getHermesCommand(): string {
   // assume if hermes-engine exists it should be used instead of hermesvm
   const hermesEngine = path.join("node_modules", "hermes-engine", getHermesOSBin(), getHermesOSExe());
   if (fileExists(hermesEngine)) {
+    console.log("Hermes Engine: "+hermesEngine.toString())
     return hermesEngine;
   }
   return path.join("node_modules", "hermesvm", getHermesOSBin(), "hermes");
