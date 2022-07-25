@@ -483,8 +483,8 @@ export function getAndroidHermesEnabled(gradleFile: string): boolean {
       throw new Error(`Unable to parse the "${buildGradlePath}" file. Please ensure it is a well-formed Gradle file.`);
     })
     .then((buildGradle: any) => {
-    // fixing slow starup issue:
-    // @see: https://github.com/microsoft/appcenter-cli/issues/1881
+      // fixing slow starup issue:
+      // @see: https://github.com/microsoft/appcenter-cli/issues/1881
       return buildGradle["enableHermes:"];
     });
 }
