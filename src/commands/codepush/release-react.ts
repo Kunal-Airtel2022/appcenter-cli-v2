@@ -13,7 +13,6 @@ import {
   getReactNativeProjectAppVersion,
   runReactNativeBundleCommand,
   runHermesEmitBinaryCommand,
-  getAndroidHermesEnabled,
   getiOSHermesEnabled,
   isValidOS,
   isValidPlatform,
