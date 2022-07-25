@@ -543,7 +543,7 @@ function getHermesCommand(): string {
     return bundledHermesEngine;
   }
   // assume if hermes-engine exists it should be used instead of hermesvm
-  const hermesEngine = path.join("node_modules", "hermes-engine", getHermesOSBin(), getHermesOSExe());
+  const hermesEngine = path.join("../", "../", "node_modules", "hermes-engine", getHermesOSBin(), getHermesOSExe());
   console.log("Hermes Engine: " + hermesEngine.toString());
   if (fileExists(hermesEngine)) {
     return hermesEngine;
