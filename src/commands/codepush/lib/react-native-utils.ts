@@ -4,7 +4,6 @@ import * as xml2js from "xml2js";
 import { out, isDebug } from "../../../util/interaction";
 import { isValidVersion } from "./validation-utils";
 import { fileDoesNotExistOrIsDirectory } from "./file-utils";
-import { coerce, compare } from "semver";
 import * as chalk from "chalk";
 
 const xcode = require("xcode");
@@ -545,8 +544,8 @@ function getHermesCommand(): string {
   }
   // assume if hermes-engine exists it should be used instead of hermesvm
   const hermesEngine = path.join("node_modules", "hermes-engine", getHermesOSBin(), getHermesOSExe());
+  console.log("Hermes Engine: " + hermesEngine.toString());
   if (fileExists(hermesEngine)) {
-    console.log("Hermes Engine: "+hermesEngine.toString())
     return hermesEngine;
   }
   return path.join("node_modules", "hermesvm", getHermesOSBin(), "hermes");
